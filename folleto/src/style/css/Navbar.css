@@ -96,8 +96,90 @@
 }
 
 @keyframes wave {
-  0% { background-position: 0% 50%; }
-  50% { background-position: 100% 50%; }
-  100% { background-position: 0% 50%; }
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
 
+/* 📱 Responsive para pantallas chicas (ej: J7 ~720px) */
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+  }
+
+  .firstnav,
+  .secondnav,
+  .thirdnav {
+    width: 100%;
+    justify-content: space-between;
+    height: auto;
+    margin: 5px 0;
+  }
+
+  .logo {
+    margin-left: 0;
+    font-size: 18px;
+  }
+
+  .iconBurg {
+    font-size: 26px;
+    margin-right: 0;
+  }
+
+  .navbarmenu {
+    font-size: 22px;
+    text-align: left;
+  }
+
+  .buttonOne,
+  .buttonTwo,
+  .buttonThree {
+    margin-right: 10px;
+    font-size: 14px;
+  }
+
+  .title {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  .menuContent {
+    width: 100%;
+    height: auto;
+  }
+}
+
+/* 📱 Extra pequeño (≤480px) */
+@media screen and (max-width: 480px) {
+  .navbar {
+    padding: 5px;
+  }
+
+  .iconBurg {
+    font-size: 22px;
+  }
+
+  .navbarmenu {
+    font-size: 18px;
+  }
+
+  .buttonOne,
+  .buttonTwo,
+  .buttonThree {
+    font-size: 12px;
+    margin-right: 5px;
+  }
+
+  .title {
+    font-size: 12px;
+  }
 }

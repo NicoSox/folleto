@@ -11,7 +11,7 @@ const Navbar = () => {
                     <img className='logo' src="/UTNnav.png" alt="Logo UTN" />
                 </div>
                 <div className='secondnav'>
-                    <h4 className="title"style={{ color: "white" }}>Ingeniería en Sistemas: la carrera que impulsa el futuro</h4>
+                    <h4 className="title">Ingeniería en Sistemas: la carrera que impulsa el futuro</h4>
                 </div>
                 <div className='thirdnav'>
                     <h4 className='buttonOne'><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Inicio</Link></h4>

@@ -6,6 +6,9 @@
     background-size: cover;
      background-position: center;  /* centra la imagen */
   background-attachment: fixed;
+  align-items: center;
+  display: flex;
+    justify-content: center;    
 }
 
 .lista{
@@ -13,9 +16,54 @@
     color: white;
     font-weight: 700;
     background: rgba(0,0,0,0.4);
+    margin-top: 50px;
+    margin-bottom: 50px;
+    width: 90%;
 }
 
 .items{
     margin-top: 10px;
 }
+.titleHome{
+    font-size: 26px;
+    color: white;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin-bottom: 50px;
+    text-align: center;
+}
 
+
+/* 📱 Responsive para pantallas chicas (J7 ~720px) */
+@media screen and (max-width: 768px) {
+  .lista {
+    font-size: 10px;      /* texto más chico */
+    width: 95%;           /* que ocupe más ancho */
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px;
+  }
+
+  .items {
+    font-size: 14px;      /* items más legibles en pantallas chicas */
+    margin-top: 8px;
+  }
+
+  .MainHome {
+    background-attachment: scroll; /* evita problemas de fixed en móviles */
+    padding: 10px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .lista {
+    font-size: 14px;
+    width: 100%;
+    margin: 10px 0;
+    padding: 8px;
+  }
+
+  .items {
+    font-size: 13px;
+  }
+}
