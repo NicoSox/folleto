@@ -66,4 +66,12 @@
   .items {
     font-size: 13px;
   }
+  .titleHome{
+    font-size: 18px;
+    color: white;
+    font-weight: 800;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
+    margin-bottom: 50px;
+    text-align: center;
+}
 }

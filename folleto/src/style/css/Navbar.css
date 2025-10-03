@@ -162,6 +162,8 @@
 @media screen and (max-width: 480px) {
   .navbar {
     padding: 5px;
+    display: flex;
+    flex-direction: column;
   }
 
   .iconBurg {
@@ -176,10 +178,18 @@
   .buttonTwo,
   .buttonThree {
     font-size: 12px;
-    margin-right: 5px;
   }
+  .logo {
 
+  }
   .title {
     font-size: 12px;
   }
+  .thirdnav{
+    justify-content: center;
+    gap: 28px;
+  }
+    .secondnav{
+    justify-content: center;
+    }
 }
