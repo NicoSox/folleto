@@ -1,0 +1,103 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+.navbar{
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #07112d;
+}
+.firstnav{
+    width: 33%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.secondnav{
+    width: 34%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+.thirdnav{
+    width: 33%;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content:right;
+}
+.logo{
+   
+    margin-left: 10px;
+}
+.iconBurg{
+    font-size: 30px;
+    color: white;
+    display: flex;
+    align-items: center;
+    margin-right: 20px;
+}
+.iconBurg:hover{
+    cursor: pointer;
+}
+.menuItems {
+  opacity: 0;
+  transform: translateY(-20px);
+  transition: opacity 0.3s, transform 0.3s;
+  pointer-events: none;
+}
+
+.menuItems.open {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+.menuContent{
+ height: 400px;
+ width: 200px;
+}
+.navbarmenu{
+    font-size: 30px;
+    color:white;
+    height: 30px;
+    width: 100%;
+}
+.buttonOne, .buttonTwo, .buttonThree{
+    margin-right: 20px;
+    cursor: pointer;
+}
+.buttonOne:hover, .buttonTwo:hover, .buttonThree:hover{
+    color: #e74e2d;
+}
+.title{
+      font-size: 16px;
+  font-weight: bold;
+  background: linear-gradient(
+    -45deg,
+    #ff0000,
+    #ff7300,
+    #ffeb00,
+    #47ff00,
+    #00ffe5,
+    #002bff,
+    #a200ff,
+    #ff00ea
+  );
+  background-size: 400% 400%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wave 8s ease infinite;
+}
+
+@keyframes wave {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+
+}
