@@ -14,7 +14,7 @@ const Navbar = () => {
       </div>
 
       <div className={`nav-links ${menuOpen ? "active" : ""}`}>
-        <Link to="/Home">Inicio</Link>
+        <Link to="/">Inicio</Link>
         <Link to="/SaberMas">¿Cómo me inscribo?</Link>
 
         {/* Dropdown controlado sobre el contenedor padre */}
@@ -33,7 +33,7 @@ const Navbar = () => {
             <Link to="/Energia">Energía Eléctrica</Link>
             <Link to="/Mecanica">Mecánica</Link>
             <Link to="/Electronica">Electrónica</Link>
-            <Link to="/">Sistemas</Link>
+            <Link to="/Sistemas">Sistemas</Link>
           </div>
         </div>
 

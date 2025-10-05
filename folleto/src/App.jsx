@@ -11,13 +11,13 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<IntroUTN/>} />
+        <Route path="/Sistemas" element={<Home />} />
         <Route path="/SaberMas" element={<SaberMas />} />
         <Route path="/Civil" element={<Civil />} />
         <Route path="/Energia" element={<Energia />} />
         <Route path="Mecanica" element={<Mecanica />} />
         <Route path="Electronica" element={<Electronica />} />  
-        <Route path="Home" element={<IntroUTN/>} />
       </Routes>
     </BrowserRouter>
   );

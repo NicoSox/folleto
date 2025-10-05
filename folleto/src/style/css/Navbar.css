@@ -38,7 +38,7 @@
   display: flex;
   align-items: center;
   gap: 25px;
-  position: relative; /* para que el dropdown absoluto se ancle */
+  position: relative;
 }
 
 .nav-links a {

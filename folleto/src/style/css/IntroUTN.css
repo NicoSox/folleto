@@ -1,7 +1,7 @@
 .IntroUTN {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../../assets/UTN_background.jpg); /* Cambiar por tu imagen de fondo */
+  background-image: url(../../assets/backGeneral.jpg); /* Imagen de fondo */
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -11,6 +11,13 @@
   padding: 50px 20px;
   color: white;
   position: relative;
+  transition: background-image 0.5s ease-in-out, opacity 0.8s ease-in-out;
+  opacity: 1;
+}
+
+/* Clase agregada cuando la imagen ya cargó (desde React opcionalmente) */
+.IntroUTN.loaded {
+  opacity: 1;
 }
 
 .overlay {
@@ -73,8 +80,14 @@
   line-height: 1.4;
 }
 
-/* Responsive */
+/* 📱 Solución para móviles (evita bug de fondo blanco) */
 @media screen and (max-width: 768px) {
+  .IntroUTN {
+    background-attachment: scroll; /* evita el salto y el fondo blanco */
+    background-position: center top;
+    background-color: #07112d; /* color sólido de respaldo mientras carga */
+  }
+
   .main-title {
     font-size: 28px;
   }
