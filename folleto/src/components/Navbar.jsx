@@ -29,11 +29,11 @@ const Navbar = () => {
             className="dropdown-content"
             style={{ display: dropdownOpen ? "flex" : "none" }}
           >
-            <Link to="/Civil">Civil</Link>
+            <Link to="/Sistemas">Sistemas</Link>
             <Link to="/Energia">Energía Eléctrica</Link>
             <Link to="/Mecanica">Mecánica</Link>
+            <Link to="/Civil">Civil</Link>
             <Link to="/Electronica">Electrónica</Link>
-            <Link to="/Sistemas">Sistemas</Link>
           </div>
         </div>
 

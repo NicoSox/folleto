@@ -133,4 +133,7 @@
     top: 0;
     box-shadow: none;
   }
+  .nav-title{
+    font-size: 12px;
+  }
 }
