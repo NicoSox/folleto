@@ -1,7 +1,10 @@
 .MainMeca {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../../assets/Meca.jpg); /* Cambiá por una imagen de obras o estructuras */
+  background: #0a0a0a;
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(../../assets/Energia.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -16,26 +19,27 @@
 
 /* Capa translúcida */
 .overlay {
-  background: rgba(15, 15, 15, 0.65);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
   border-radius: 20px;
   padding: 40px;
   width: 90%;
-  max-width: 900px;
+  max-width: 950px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   animation: fadeIn 1.5s ease;
 }
 
+/* Título principal */
 .titleHome {
   font-size: 28px;
   font-weight: 800;
   text-align: center;
   margin-bottom: 35px;
-  color: #f2f2f2;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
-/* Lista estilizada */
+/* Lista */
 .lista {
   list-style: none;
   padding: 0;
@@ -43,8 +47,8 @@
 }
 
 .items {
-  background: rgba(255, 255, 255, 0.08);
-  border-left: 5px solid #ff8c32; /* naranja construcción */
+  background: rgba(255, 255, 255, 0.1);
+   border-left: 5px solid #ff8c32;
   padding: 15px 20px;
   margin-bottom: 15px;
   border-radius: 12px;
@@ -59,11 +63,62 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* Resalta los títulos */
 .items strong {
-  color: #4da6ff; /* azul acero */
+  color: #00e0ff;
   display: inline-block;
   margin-bottom: 5px;
+}
+
+/* Sección de testimonios */
+.testimonios {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.titleTestimonios {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00c6ff;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 8px rgba(0, 198, 255, 0.4);
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Tarjetas individuales */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+}
+
+.texto {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.autor {
+  font-size: 15px;
+  color: #00e0ff;
+  font-weight: 600;
 }
 
 /* Animación */
@@ -93,6 +148,15 @@
     font-size: 16px;
     padding: 12px 15px;
   }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -102,7 +166,14 @@
 
   .items {
     font-size: 14px;
-    border-left: 3px solid #ff8c32;
+    border-left: 4px solid #00c6ff;
+  }
+
+  .titleTestimonios {
+    font-size: 20px;
+  }
+
+  .texto {
+    font-size: 14px;
   }
 }
-

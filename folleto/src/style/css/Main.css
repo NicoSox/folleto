@@ -1,57 +1,45 @@
 .MainHome {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../../assets/back2.jpg);
+  background: #0a0a0a;
+  background-image: 
+    linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+    url(../../assets/Energia.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
   position: relative;
   color: white;
-  overflow: hidden;
 }
 
-/* Fondo fijo solo en escritorio */
-@media (min-width: 769px) {
-  .MainHome {
-    background-attachment: fixed;
-  }
-}
-
-/* Capa oscura */
-.MainHome::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.55);
-  backdrop-filter: blur(2px);
-  z-index: 0;
-}
-
+/* Capa translúcida */
 .overlay {
-  position: relative;
-  z-index: 1;
   background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(4px);
   border-radius: 20px;
   padding: 40px;
   width: 90%;
-  max-width: 900px;
+  max-width: 950px;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
   animation: fadeIn 1.5s ease;
 }
 
+/* Título principal */
 .titleHome {
   font-size: 28px;
   font-weight: 800;
   text-align: center;
   margin-bottom: 35px;
   color: #ffffff;
-  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
 }
 
+/* Lista */
 .lista {
   list-style: none;
   padding: 0;
@@ -60,7 +48,7 @@
 
 .items {
   background: rgba(255, 255, 255, 0.1);
-  border-left: 5px solid #ff8c32;
+   border-left: 5px solid #ff8c32;
   padding: 15px 20px;
   margin-bottom: 15px;
   border-radius: 12px;
@@ -72,15 +60,80 @@
 .items:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
 .items strong {
-  color: #00c6ff;
+  color: #00e0ff;
   display: inline-block;
   margin-bottom: 5px;
 }
 
+/* Sección de testimonios */
+.testimonios {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.titleTestimonios {
+  font-size: 24px;
+  font-weight: 700;
+  color: #00c6ff;
+  margin-bottom: 30px;
+  text-shadow: 1px 1px 8px rgba(0, 198, 255, 0.4);
+}
+
+/* Contenedor de tarjetas */
+.cards-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Tarjetas individuales */
+.card {
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 25px;
+  width: 280px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 22px rgba(0,0,0,0.5);
+}
+
+.texto {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #e0e0e0;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.autor {
+  font-size: 15px;
+  color: #00e0ff;
+  font-weight: 600;
+}
+
+/* Animación */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
   .overlay {
     padding: 25px;
@@ -95,6 +148,15 @@
     font-size: 16px;
     padding: 12px 15px;
   }
+
+  .cards-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -104,6 +166,14 @@
 
   .items {
     font-size: 14px;
-    border-left: 5px solid #ff8c32;
+    border-left: 4px solid #00c6ff;
+  }
+
+  .titleTestimonios {
+    font-size: 20px;
+  }
+
+  .texto {
+    font-size: 14px;
   }
 }

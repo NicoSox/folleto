@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../style/css/Main.css'
 
-const Main = () => {
+const MainSistemas = () => {
   return (
     <div className='MainHome'>
       <div className='overlay'>
@@ -32,9 +32,30 @@ const Main = () => {
             <strong>🤝 Desarrollo integral:</strong> Además de lo técnico, se promueven habilidades blandas como liderazgo y trabajo en equipo.
           </li>
         </ul>
+
+        <div className="testimonios">
+          <h3 className="titleTestimonios">💬 Testimonios de estudiantes y egresados</h3>
+
+          <div className="cards-container">
+            <div className="card">
+              <p className="texto">“Los proyectos prácticos desde el primer año me dieron la confianza para enfrentar desafíos reales en empresas de software.”</p>
+              <h4 className="autor">— Mariana López, 4° año</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“Gracias a la UTN conseguí prácticas profesionales que me permitieron desarrollar un portafolio sólido antes de recibirme.”</p>
+              <h4 className="autor">— Diego Fernández, Egresado 2021</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“Aprender en UTN Sistemas me permitió participar en hackathons y proyectos colaborativos, ampliando mi red profesional y habilidades técnicas.”</p>
+              <h4 className="autor">— Valentina Ramos, Ingeniera en Sistemas</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )
 }
 
-export default Main
+export default MainSistemas

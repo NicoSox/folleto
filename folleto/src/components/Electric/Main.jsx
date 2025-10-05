@@ -29,6 +29,27 @@ const MainEnergia = () => {
             <strong>💡 Desarrollo integral:</strong> Se fomentan habilidades blandas, liderazgo y ética profesional aplicables en cualquier proyecto energético.
           </li>
         </ul>
+
+        <div className="testimonios">
+          <h3 className="titleTestimonios">💬 Testimonios de estudiantes y egresados</h3>
+          
+          <div className="cards-container">
+            <div className="card">
+              <p className="texto">“Elegí Energía Eléctrica porque siempre me apasionó entender cómo funciona el sistema energético del país. La UTN me dio la oportunidad de trabajar en proyectos reales desde los primeros años.”</p>
+              <h4 className="autor">— Lucía Fernández, 4° año</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“Gracias a las prácticas en empresas distribuidoras, logré insertarme laboralmente antes de recibirme. La carrera combina teoría y práctica de una manera excelente.”</p>
+              <h4 className="autor">— Marcos Ruiz, Egresado 2023</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“La UTN me abrió las puertas al mundo de las energías renovables. Hoy formo parte de un proyecto solar en el norte argentino. Sin dudas, una decisión que cambió mi vida.”</p>
+              <h4 className="autor">— Natalia Gómez, Ingeniera en Energía</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -1,7 +1,7 @@
 import React from 'react'
 import '../../style/css/MainCivil.css'
 
-const Main = () => {
+const MainCivil = () => {
   return (
     <section className='MainCivil'>
       <div className='overlay'>
@@ -32,9 +32,30 @@ const Main = () => {
             <strong>🤝 Formación humana y profesional:</strong> Se impulsa el liderazgo, la responsabilidad social y la ética profesional como pilares de la carrera.
           </li>
         </ul>
+
+        <div className="testimonios">
+          <h3 className="titleTestimonios">💬 Testimonios de estudiantes y egresados</h3>
+
+          <div className="cards-container">
+            <div className="card">
+              <p className="texto">“Participar en proyectos de construcción real desde el primer año me permitió comprender la importancia de la planificación y la seguridad en obras.”</p>
+              <h4 className="autor">— Carlos Méndez, 3° año</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“Gracias a las prácticas y convenios de la UTN conseguí mi primer trabajo en una empresa constructora mientras cursaba la carrera.”</p>
+              <h4 className="autor">— Lucía Fernández, Egresada 2020</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“La combinación de teoría, laboratorios y proyectos me preparó para liderar equipos de ingeniería y proyectos urbanos complejos.”</p>
+              <h4 className="autor">— Juan Pérez, Ingeniero Civil</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   )
 }
 
-export default Main
+export default MainCivil

@@ -29,6 +29,27 @@ const MainElectronica = () => {
             <strong>💡 Desarrollo integral:</strong> Se promueven habilidades blandas, trabajo en equipo y liderazgo, esenciales en cualquier proyecto tecnológico.
           </li>
         </ul>
+
+        <div className="testimonios">
+          <h3 className="titleTestimonios">💬 Testimonios de estudiantes y egresados</h3>
+
+          <div className="cards-container">
+            <div className="card">
+              <p className="texto">“Desde el primer año pude experimentar con robótica y microcontroladores. La UTN me dio la confianza y las herramientas para crear proyectos reales.”</p>
+              <h4 className="autor">— Andrés Morales, 3° año</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“Las prácticas en laboratorios y la participación en competencias de electrónica me ayudaron a conseguir mi primer empleo antes de recibirme.”</p>
+              <h4 className="autor">— Valentina Ríos, Egresada 2022</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“Aprender electrónica en UTN me permitió trabajar en proyectos de automatización industrial y conectarme con profesionales del sector tecnológico.”</p>
+              <h4 className="autor">— Tomás Pérez, Ingeniero Electrónico</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

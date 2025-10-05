@@ -29,6 +29,27 @@ const MainMecanica = () => {
             <strong>💡 Desarrollo integral:</strong> Se promueven habilidades blandas, liderazgo y trabajo en equipo, esenciales en cualquier proyecto.
           </li>
         </ul>
+
+        <div className="testimonios">
+          <h3 className="titleTestimonios">💬 Testimonios de estudiantes y egresados</h3>
+
+          <div className="cards-container">
+            <div className="card">
+              <p className="texto">“Gracias a los talleres y laboratorios pude aplicar conceptos desde el primer año, lo que me dio mucha confianza en proyectos reales.”</p>
+              <h4 className="autor">— Martín López, 2° año</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“Participar en proyectos mecánicos con empresas asociadas a la UTN me permitió conseguir prácticas profesionales antes de graduarme.”</p>
+              <h4 className="autor">— Valentina Gómez, Egresada 2019</h4>
+            </div>
+
+            <div className="card">
+              <p className="texto">“El enfoque práctico y la actualización constante en tecnología me prepararon para liderar equipos de ingeniería mecánica con confianza.”</p>
+              <h4 className="autor">— Diego Fernández, Ingeniero Mecánico</h4>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   )

@@ -1,84 +1,167 @@
-.Main{
-    width: 100%;
-    height: 100vh;
-    background-image: url(../../../src/assets/back2.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-     background-position: center;  /* centra la imagen */
-    background-attachment: fixed;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.titleMore{
-    font-size: 26px;
-    color: white;
-    font-weight: 800;
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.7);
-    margin-bottom: 50px;
-    text-align: center;
-}
-.listaMore{
-    font-size: 20px;
-    color: white;
-    font-weight: 700;
-    background: rgba(0,0,0,0.4);
-    margin-top: 50px;
-    margin-bottom: 50px;
-    width: 90%;
+.MainSaberMas {
+  width: 100%;
+  min-height: 100vh;
+  background: #0d0d0d;
+  background-image:
+    linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)),
+    url(../../assets/backGeneral.jpg); /* Fondo general */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 20px;
+  color: white;
+  position: relative;
+  transition: background-image 0.4s ease-in-out;
 }
 
-.itemsMore{
-    margin-top: 10px;
+/* Fondo base oscuro por si la imagen tarda en cargar */
+.MainSaberMas::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: #0d0d0d;
+  z-index: 0;
 }
 
-/* 📱 Tablets y celulares medianos (≤768px) */
+/* Capa oscura con blur */
+.overlay {
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 0, 0, 0.6);
+  backdrop-filter: blur(5px);
+  padding: 40px;
+  border-radius: 20px;
+  max-width: 900px;
+  width: 90%;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.2s ease;
+}
+
+/* Título */
+.titleMore {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #ffffff;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.7);
+}
+
+/* Lista */
+.listaMore {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  counter-reset: pasos;
+}
+
+/* Cada ítem */
+.itemsMore {
+  position: relative;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 5px solid #ff8c32;
+  padding: 20px 20px 20px 55px;
+  margin-bottom: 20px;
+  border-radius: 12px;
+  font-size: 18px;
+  line-height: 1.6;
+  transition: all 0.3s ease;
+  counter-increment: pasos;
+}
+
+/* Números animados */
+.itemsMore::before {
+  content: counter(pasos);
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #ff8c32;
+  color: white;
+  font-weight: bold;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  box-shadow: 0 0 8px rgba(255, 140, 50, 0.6);
+}
+
+/* Hover */
+.itemsMore:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+/* Links */
+.itemsMore a {
+  color: #00c6ff;
+  text-decoration: underline;
+  transition: color 0.3s;
+}
+
+.itemsMore a:hover {
+  color: #ff8c32;
+}
+
+/* Animación de aparición */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
-  .Main {
-    height: auto; /* se ajusta a contenido */
-    padding: 20px;
-    background-attachment: scroll; /* evita problemas en móviles */
+  .MainSaberMas {
+    background-attachment: scroll;
+  }
+
+  .overlay {
+    padding: 25px;
   }
 
   .titleMore {
     font-size: 22px;
-    margin-bottom: 30px;
-  }
-
-  .listaMore {
-    font-size: 16px;
-    width: 95%;
-    margin: 20px 0;
-    padding: 10px;
   }
 
   .itemsMore {
+    font-size: 16px;
+    padding: 15px 15px 15px 45px;
+  }
+
+  .itemsMore::before {
+    width: 24px;
+    height: 24px;
     font-size: 14px;
-    margin-top: 8px;
   }
 }
 
-/* 📱 Celulares pequeños (≤480px) */
 @media screen and (max-width: 480px) {
-  .Main {
-    display: flex;
-    height: 100vh;
-  }
-
   .titleMore {
     font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .listaMore {
-    font-size: 14px;
-    width: 100%;
-    margin: 15px 0;
-    padding: 8px;
   }
 
   .itemsMore {
-    font-size: 13px;
+    font-size: 14px;
+    padding: 12px 12px 12px 40px;
+  }
+
+  .itemsMore::before {
+    width: 22px;
+    height: 22px;
+    font-size: 12px;
   }
 }
