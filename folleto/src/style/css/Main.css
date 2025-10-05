@@ -5,19 +5,36 @@
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 40px 20px;
   position: relative;
   color: white;
+  overflow: hidden;
 }
 
-/* Capa oscura para legibilidad */
+/* Fondo fijo solo en escritorio */
+@media (min-width: 769px) {
+  .MainHome {
+    background-attachment: fixed;
+  }
+}
+
+/* Capa oscura */
+.MainHome::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(2px);
+  z-index: 0;
+}
+
 .overlay {
+  position: relative;
+  z-index: 1;
   background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
   border-radius: 20px;
   padding: 40px;
   width: 90%;
@@ -32,10 +49,9 @@
   text-align: center;
   margin-bottom: 35px;
   color: #ffffff;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* Lista y animación */
 .lista {
   list-style: none;
   padding: 0;
@@ -56,29 +72,15 @@
 .items:hover {
   background: rgba(255, 255, 255, 0.2);
   transform: translateY(-3px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
 }
 
-/* Íconos dentro del texto */
 .items strong {
   color: #00c6ff;
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* Animación de aparición */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive */
 @media screen and (max-width: 768px) {
   .overlay {
     padding: 25px;
