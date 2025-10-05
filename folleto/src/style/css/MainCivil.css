@@ -1,7 +1,7 @@
-.MainHome {
+.MainCivil {
   width: 100%;
   min-height: 100vh;
-  background-image: url(../../assets/back2.jpg);
+  background-image: url(../../assets/backCivil.webp); /* Cambiá por una imagen de obras o estructuras */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
@@ -14,10 +14,10 @@
   color: white;
 }
 
-/* Capa oscura para legibilidad */
+/* Capa translúcida */
 .overlay {
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(4px);
+  background: rgba(15, 15, 15, 0.65);
+  backdrop-filter: blur(5px);
   border-radius: 20px;
   padding: 40px;
   width: 90%;
@@ -31,11 +31,11 @@
   font-weight: 800;
   text-align: center;
   margin-bottom: 35px;
-  color: #ffffff;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.8);
+  color: #f2f2f2;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.8);
 }
 
-/* Lista y animación */
+/* Lista estilizada */
 .lista {
   list-style: none;
   padding: 0;
@@ -43,8 +43,8 @@
 }
 
 .items {
-  background: rgba(255, 255, 255, 0.1);
-  border-left: 5px solid #ff8c32;
+  background: rgba(255, 255, 255, 0.08);
+  border-left: 5px solid #ff8c32; /* naranja construcción */
   padding: 15px 20px;
   margin-bottom: 15px;
   border-radius: 12px;
@@ -59,14 +59,14 @@
   box-shadow: 0 4px 12px rgba(0,0,0,0.3);
 }
 
-/* Íconos dentro del texto */
+/* Resalta los títulos */
 .items strong {
-  color: #00c6ff;
+  color: #4da6ff; /* azul acero */
   display: inline-block;
   margin-bottom: 5px;
 }
 
-/* Animación de aparición */
+/* Animación */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -102,6 +102,7 @@
 
   .items {
     font-size: 14px;
-    border-left: 5px solid #ff8c32;
+    border-left: 3px solid #ff8c32;
   }
 }
+

@@ -1,26 +1,58 @@
-import React, { useState } from 'react';
-import '../style/css/Navbar.css';
-import { Link } from 'react-router-dom';
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import "../style/css/Navbar.css";
 
 const Navbar = () => {
+  const [menuOpen, setMenuOpen] = useState(false);
+  const [dropdownOpen, setDropdownOpen] = useState(false);
 
-    return (
-        <>
-            <div className='navbar'>
-                <div className='firstnav'>
-                    <img className='logo' src="/UTNnav.png" alt="Logo UTN" />
-                </div>
-                <div className='secondnav'>
-                    <h4 className="title">Ingeniería en Sistemas: la carrera que impulsa el futuro</h4>
-                </div>
-                <div className='thirdnav'>
-                    <h4 className='buttonOne'><Link to="/" style={{ color: 'inherit', textDecoration: 'none' }}>Inicio</Link></h4>
-                    <h4 className='buttonTwo'><Link to="/SaberMas" style={{ color: 'inherit', textDecoration: 'none' }}>¿Como me inscribo?</Link></h4>
-                    <h4 className='buttonThree'><a href='https://frt.utn.edu.ar/' style={{ color: 'inherit', textDecoration: 'none' }}>Sitio oficial</a></h4>
-                </div>
-            </div>
-        </>
-    );
+  return (
+    <nav className="navbar">
+      <div className="nav-left">
+        <img className="logo" src="/UTNnav.png" alt="Logo UTN" />
+        <h1 className="nav-title">Explorá las Ingenierías de la UTN</h1>
+      </div>
+
+      <div className={`nav-links ${menuOpen ? "active" : ""}`}>
+        <Link to="/Home">Inicio</Link>
+        <Link to="/SaberMas">¿Cómo me inscribo?</Link>
+
+        {/* Dropdown controlado sobre el contenedor padre */}
+        <div
+          className="dropdown"
+          onMouseEnter={() => setDropdownOpen(true)}
+          onMouseLeave={() => setDropdownOpen(false)}
+        >
+          <button className="dropbtn">Ingenierias ▼</button>
+
+          <div
+            className="dropdown-content"
+            style={{ display: dropdownOpen ? "flex" : "none" }}
+          >
+            <Link to="/Civil">Civil</Link>
+            <Link to="/Energia">Energía Eléctrica</Link>
+            <Link to="/Mecanica">Mecánica</Link>
+            <Link to="/Electronica">Electrónica</Link>
+            <Link to="/">Sistemas</Link>
+          </div>
+        </div>
+
+        <a
+          href="https://frt.utn.edu.ar/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Sitio oficial
+        </a>
+      </div>
+
+      <div className="hamburger" onClick={() => setMenuOpen(!menuOpen)}>
+        <span className="bar"></span>
+        <span className="bar"></span>
+        <span className="bar"></span>
+      </div>
+    </nav>
+  );
 };
 
 export default Navbar;

@@ -5,191 +5,132 @@
     font-family: 'Poppins', sans-serif;
 }
 
-.navbar{
-    height: 60px;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    background-color: #07112d;
-}
-.firstnav{
-    width: 33%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-.secondnav{
-    width: 34%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-}
-.thirdnav{
-    width: 33%;
-    height: 100%;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content:right;
-}
-.logo{
-   
-    margin-left: 10px;
-}
-.iconBurg{
-    font-size: 30px;
-    color: white;
-    display: flex;
-    align-items: center;
-    margin-right: 20px;
-}
-.iconBurg:hover{
-    cursor: pointer;
-}
-.menuItems {
-  opacity: 0;
-  transform: translateY(-20px);
-  transition: opacity 0.3s, transform 0.3s;
-  pointer-events: none;
+.navbar {
+  width: 100%;
+  background-color: #07112d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 30px; /* navbar un poco más alto */
+  position: relative;
+  z-index: 10;
+  color: white;
+  font-family: sans-serif;
 }
 
-.menuItems.open {
-  opacity: 1;
-  transform: translateY(0);
-  pointer-events: auto;
-}
-.menuContent{
- height: 400px;
- width: 200px;
-}
-.navbarmenu{
-    font-size: 30px;
-    color:white;
-    height: 30px;
-    width: 100%;
-}
-.buttonOne, .buttonTwo, .buttonThree{
-    margin-right: 20px;
-    cursor: pointer;
-}
-.buttonOne:hover, .buttonTwo:hover, .buttonThree:hover{
-    color: #e74e2d;
-}
-.title{
-      font-size: 16px;
-  font-weight: bold;
-  background: linear-gradient(
-    -45deg,
-    #ff0000,
-    #ff7300,
-    #ffeb00,
-    #47ff00,
-    #00ffe5,
-    #002bff,
-    #a200ff,
-    #ff00ea
-  );
-  background-size: 400% 400%;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: wave 8s ease infinite;
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 20px;
 }
 
-@keyframes wave {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
+.logo {
+  width: 60px;
+  height: auto;
 }
 
-/* 📱 Responsive para pantallas chicas (ej: J7 ~720px) */
+.nav-title {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  position: relative; /* para que el dropdown absoluto se ancle */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.nav-links a:hover {
+  color: #e74e2d;
+}
+
+.dropdown {
+  position: relative; /* CONTENEDOR del dropdown */
+}
+
+.dropbtn {
+  background: none;
+  border: none;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.dropdown-content {
+  position: absolute; /* no afecta la altura del navbar */
+  top: 100%; /* justo debajo del botón */
+  left: 0;
+  background-color: #07112d;
+  min-width: 180px;
+  box-shadow: 0px 8px 16px rgba(0,0,0,0.3);
+  border-radius: 5px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  z-index: 20;
+}
+
+.dropdown-content a {
+  padding: 10px 15px;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content a:hover {
+  background-color: #e74e2d;
+  color: black;
+}
+
+/* Hamburger para móviles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+}
+
+.bar {
+  width: 28px;
+  height: 3px;
+  background-color: white;
+  border-radius: 2px;
+}
+
+/* Responsive */
 @media screen and (max-width: 768px) {
-  .navbar {
-    height: auto;
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    right: 0;
+    background-color: #07112d;
     flex-direction: column;
-    align-items: flex-start;
-    padding: 10px;
+    width: 220px;
+    padding: 20px;
+    gap: 15px;
+    display: none;
+    border-radius: 5px;
   }
 
-  .firstnav,
-  .secondnav,
-  .thirdnav {
-    width: 100%;
-    justify-content: space-between;
-    height: auto;
-    margin: 5px 0;
-  }
-
-  .logo {
-    margin-left: 0;
-    font-size: 18px;
-  }
-
-  .iconBurg {
-    font-size: 26px;
-    margin-right: 0;
-  }
-
-  .navbarmenu {
-    font-size: 22px;
-    text-align: left;
-  }
-
-  .buttonOne,
-  .buttonTwo,
-  .buttonThree {
-    margin-right: 10px;
-    font-size: 14px;
-  }
-
-  .title {
-    font-size: 14px;
-    text-align: center;
-  }
-
-  .menuContent {
-    width: 100%;
-    height: auto;
-  }
-}
-
-/* 📱 Extra pequeño (≤480px) */
-@media screen and (max-width: 480px) {
-  .navbar {
-    padding: 5px;
+  .nav-links.active {
     display: flex;
-    flex-direction: column;
   }
 
-  .iconBurg {
-    font-size: 22px;
+  .hamburger {
+    display: flex;
   }
 
-  .navbarmenu {
-    font-size: 18px;
+  .dropdown-content {
+    position: relative;
+    top: 0;
+    box-shadow: none;
   }
-
-  .buttonOne,
-  .buttonTwo,
-  .buttonThree {
-    font-size: 12px;
-  }
-  .logo {
-
-  }
-  .title {
-    font-size: 12px;
-  }
-  .thirdnav{
-    justify-content: center;
-    gap: 28px;
-  }
-    .secondnav{
-    justify-content: center;
-    }
 }
